@@ -1,0 +1,95 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+a:hover {
+    color: orange;
+}
+
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+/* ESTILO PAGINA INICIAL */
+.grid_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "header header header header"
+        "sectionOne sectionOne sectionOne sectionOne"
+        "sectionOne sectionOne sectionOne sectionOne"
+        "SectionTwo SectionTwo SectionTwo SectionTwo"
+        "SectionTwo SectionTwo SectionTwo SectionTwo"
+        "SectionThree SectionThree SectionThree SectionThree"
+        "SectionThree SectionThree SectionThree SectionThree"
+        "footer footer footer footer";
+}
+
+/* Inicio de edicion del Header */
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "logo navBar navBar";
+    grid-area: header;
+    height: 50px;
+    background-color: brown;
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.navBar {
+    grid-area: navBar;
+}
+
+@import "./header";
+
+
+/* FIN DE EDICION DEL HEADER */
+
+/* INICIO DE EDICION DE SECCION UNO */
+.sectionOne {
+    grid-template-areas:
+        "titleOne titleOne titleOne"
+        "imgOne imgOne imgOne"
+        "imgOne imgOne imgOne"
+        "imgOne imgOne imgOne";
+    grid-area: sectionOne;
+
+    background-color: rgb(160, 160, 176);
+    padding: 2%;
+    padding-bottom: 50px;
+
+    img {
+        border: 2px solid brown;
+    }
+    .titleOne {
+        grid-area: titleOne;
+        margin: 30px;
+        text-align: center;
+        border: 1px solid black;
+        background-color: brown;
+    }
+    
+    .imgOne {
+        grid-area: imgOne;
+        display: flex;
+        overflow: auto;
+    }
+}
+/* FIN EDICION SECCION UNO */
+/* COMIENZO EDICION FOOTER */
+
+
+
+@import "./footer"

@@ -1,0 +1,31 @@
+.header {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+
+    .logo {
+        img {
+            margin-left: 3px;
+            margin-top: 3px;
+            height: 50px
+        }
+    }
+    .navBar {
+        ul {
+            display: flex;
+            
+            li {
+                list-style: none;
+                margin: 5px;
+                padding: 5px;
+                border: 1px black solid;
+                border-radius: 5%;
+                background-color: rgb(255, 255, 255);
+            }
+        }
+    
+    }
+}
+
